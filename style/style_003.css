@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Vídeo de fundo fixo */
+#video_de_fundo {
+  position: fixed;
+  z-index: -1;
+}
+
+#professora, #unidade{
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-decoration: underline;
+
+    transition: color 0.5s;
+}
+
+#professora:hover, #unidade:hover{
+    color: rgb(65, 212, 28);
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.6);
+
+}
+
+/* Conteúdo sobre o vídeo */
+#conteudo {
+    top: 2vh;
+    border: 2px dashed red;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 700px;
+    height: 400px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0);
+
+}
+
+#conteudo:hover{
+    cursor: pointer;
+}
+
+#lista_atividades{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.atividades{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-align: left;
+    width: 100%;
+
+}
+
+a{
+    transition: transform 0.3s, color 0.4s, font-size 0.4s;
+    line-height: 1.5;
+    text-shadow: 3px 2px 3px rgba(255, 0, 0, 0.418);
+}
+
+a:hover{
+    transform: translate(-1.5px, -1.5px);
+    color: rgb(247, 247, 247);
+    font-size: 1.7em;
+}
+
+#voltar {
+    
+    padding-top: 20px;
+    height: 60px;
+    width: 120px;
+    transition: height 0.2s, width 0.2s, transform 0.2s, filter 0.2s;
+}
+
+#voltar:hover{
+    transform: translate(-2px, -2px);
+    height: 70px;
+    width: 130px;
+    filter: drop-shadow(5px 4px 6px rgba(111, 247, 0, 0.7));
+}

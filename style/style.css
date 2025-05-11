@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'font-externa_01';
+    src: url("fonts/VCR_OSD_MONO_1.001.ttf") format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --fonte-niel: font-externa_01;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+#section_principal{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+
+footer{
+    color: red;
+    position: absolute;
+    bottom: 0;
+
+    width: 98vw;
+    text-align: justify;
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 0px 0px 5px;
+    
+}
+
+footer p {
+    color: rgb(255, 153, 0);
+    text-indent: 10px;
+    font-size: 1em;
+    line-height: 1.2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#rodape{
+    max-width: 700px;
+    padding: 10px;
+
+    border-radius: 15px;
+    background-color: rgba(19, 18, 18, 0.678);
+    box-shadow: 3px 3px 2px rgba(35, 38, 44, 0.829);
+
+    transition: background-color 1s;
+
+
+}
+
+#rodape:hover{
+    background-color: rgba(113, 16, 224, 0.527);
+    transition: background-color 1s;
+}
+
+
+main {
+    height: 400px;
+    width: 600px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    /* border: 3px dashed greenyellow; */
+    margin: 20px;
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+    font-family: var(--fonte-niel);
+    color: white;
+    font-size: 1.2em;
+    transition: width 1s, height 1s;
+}
+
+main h1{
+    margin-bottom: 20px;
+}
+
+#background-video {
+    position: absolute; /* Posiciona o vídeo no fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela sem distorcer */
+    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+}
+
+
+.bloco_principal{
+    padding: 10px;
+    /* border: 2px dashed red; */
+    margin: 10px 0px;
+    flex: 0 1 250px;
+    position: relative;
+}
+
+.bloco_principal h1{
+    text-align: center;
+}
+
+
+.bloco_secundario{
+    padding: 10px;
+    margin: 10px 0px;
+    flex: 0 1 220px ;
+    text-align: justify;
+    text-indent: 5px;
+    border-radius: 40px 0px 0px 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 0.9em;
+    background-color: #534acf;
+
+    transition: background-color 0.4s, transform 0.6s;
+
+    
+}
+
+/* Definição da animação */
+@keyframes mudaCor {
+    0% { background-color: #4A8CF0; }
+    20% { background-color: #724AF0; }
+    40% { background-color: #4A57F0; }
+    60% { background-color: #4AC1F0 }
+    80% { background-color: #BB75F0; }
+    90% { background-color: #939BF5; }
+    100% { background-color: #4A8CF0; }
+
+    /* 
+    O @keyframes serve para criar animações personalizadas no CSS. Ele define como um elemento deve mudar ao longo do tempo.
+
+    Basicamente, você cria uma animação e define os estágios da transformação usando porcentagens (%). 
+
+    0% → No começo da animação, a cor será verde.
+    50% → No meio da animação, a cor será azul.
+    100% → No final da animação, a cor será amarela
+*/
+}
+
+.bloco_secundario:hover {
+    transform: translate(-6px, -6px);
+    animation: mudaCor 12s linear infinite;
+
+    /* 
+    Vamos quebrar essa parte para entender cada detalhe:
+
+    animation: → Ativa uma animação no CSS.
+    mudaCor → Nome da animação (o mesmo nome que definimos no @keyframes).
+    1.5s → Duração da animação (1.5 segundos para percorrer todas as cores).
+    linear → Controla a velocidade da animação.
+    linear → Mantém a transição de cor constante (sem acelerar ou desacelerar).
+    ease → Começa devagar e acelera no meio.
+    ease-in → Começa devagar e acelera até o fim.
+    ease-out → Começa rápido e desacelera no final.
+    ease-in-out → Começa devagar, acelera no meio e desacelera no final.
+    infinite → Faz a animação repetir para sempre enquanto o mouse estiver sobre o elemento. 
+    */
+}
+
+
+
+
+.bloco_secundario h1 {
+    padding-bottom: 10px;
+}
+
+#icones {
+    margin: 5px 0px 15px 0px;
+    text-align: center;   
+}
+
+#icones img{
+    width: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#icones img:hover {
+    transform: scale(1.2) translate(-4px, -4px);  /* Aumenta ligeiramente os ícones ao passar o mouse */
+    box-shadow: 2px 2px 2px rgb(6, 216, 6);
+}
+
+#icones img:active {
+    box-shadow: 2px 2px 2px red;
+}
+
+#botao {
+    margin-top: 8px;
+    background-color: rgb(192, 45, 192);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.295);
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+#botao:hover {
+    cursor: pointer;
+    transform: translate(-1px, -1px);
+    background-color: rgb(240, 18, 240);
+    font-weight: bolder;
+    transition: transform 0.4s, background-color 0.4s, font-weight 0.4s;
+}
+
+h1{
+    padding: 0px;
+    margin: 0px;
+}
+
+#niel{
+    padding-top: 5px;
+    width: 70%;
+    height: 40%;
+    padding-left: 40px;
+    transition: width 0.4s, height 0.4s, padding-left 0.4s;
+}
+
+#niel:hover{
+    cursor: pointer;
+    width: 80%;
+    height: 50%;
+    padding-left: 30px;
+    
+}
+
+
+#audio-container {
+    position: fixed; /* Fixa o player no topo */
+    top: 0;
+    border: 2px dashed red;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o player */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+    padding: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Coloca um fundo semi-transparente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    /* update */
+}
+
+@media screen and (max-width: 520px) {
+    .bloco_principal {
+        transition: width 1s, height 1s;
+    }
+    .bloco_secundario {
+        display: none;
+        transition: display 0.3s ease; /* Aqui não funciona diretamente, mas pode ser útil em alguns casos com manipulação JS */
+        
+
+    }
+
+    main {
+        height: 450px;
+        width: 400px;
+        transition: width 1s, height 1s; /* A transição das dimensões */
+
+        transform: translateY(-50px);
+        /* border: 3px dashed greenyellow; */
+        margin: 20px;
+        border-radius: 30px;
+    
+        backdrop-filter: blur(10px);
+        font-family: var(--fonte-niel);
+        color: white;
+        font-size: 1.2em;
+    }
+
+}
+
