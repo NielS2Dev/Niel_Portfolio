@@ -17,22 +17,39 @@
   <!-- Conteúdo principal -->
   <main id="conteudo">
     <section id="bloco_principal">
-      <h1 id="unidade">LISTA DE EXERCÍCIOS (Unidade2)</h1>
+      <h1 id="unidade">Bem vindo Sr:</h1>
       <p id="professora">Professora: Dr.Bartira Paraguaçu </p>
       <div id="lista_atividades">
-          <a href="" class="atividades">Atividade a) Leia 100.</a>
+          <a href="paginas/atividade_a.html" class="atividades">Atividade a) Leia 100.</a>
           <a href="" class="atividades">Atividade b) Menor Número Digitado.</a>
           <a href="" class="atividades">Atividade c) Joao e Pedro Crescendo.</a>
           <a href="" class="atividades">Atividade d) Soma dos Divisores de um número.</a>
-          <a href="" class="atividades">Atividade e)Identificar Número Armstrong.</a>
-          <a href="" class="atividades">Atividade f)Recebendo Notas dos Alunos.</a>
+          <a href="" class="atividades">Atividade e) Identificar Número Armstrong.</a>
+          <a href="" class="atividades">Atividade f) Recebendo Notas dos Alunos.</a>
+          <a href="" class="atividades">Atividade g) Pesquisa das idades</a>
+          <a href="" class="atividades">Atividade h) 10 Numeros em um vetor X</a>
+          <a href="" class="atividades">Atividade i) Matriz 100 x 10</a>
+          <a href="" class="atividades">Atividade j) Duas Matrizes 20 x 20</a>
+          <a href="" class="atividades">Atividade k) Leia uma matriz 8 x 8</a>
+          <a href="" class="atividades">Atividade l) Multiplicação de Matrizes</a>
+          <a href="" class="atividades">Atividade m) Programa que ler 10 valores</a>
+          <a href="" class="atividades">Atividade n) Programa que leia 10 valores reais</a>
           <a href="index.html">
             <img src="media/voltar_segundo.png" alt="" id="voltar">
         </a>
       </div>
-
     </section>
   </main>
+
+  <script>
+    // Ao carregar a página, buscar o nome salvo no localStorage
+    window.onload = function () {
+      const nome = localStorage.getItem('nomeUsuario');  // Recupera o nome
+      if (nome) {
+        document.getElementById('unidade').innerText = `Bem vindo Sr: ${nome}`;
+      }
+    };
+  </script>
 
 </body>
 </html>

@@ -34,17 +34,25 @@ html, body {
 
 /* Conteúdo sobre o vídeo */
 #conteudo {
+    overflow: scroll;      
+    /* Oculta as barras de rolagem */
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    
+
     top: 2vh;
-    border: 2px dashed red;
+/*     border: 2px dashed red; */
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
-    width: 700px;
-    height: 400px;
+    width: 900px;
+    height: 550px;
     backdrop-filter: blur(5px);
     border-radius: 10px;
     background-color: rgba(245, 245, 245, 0);
+
+
 
 }
 
@@ -68,20 +76,24 @@ html, body {
 
 }
 
+.atividades{
+    padding-left: 35px;
+}
+
 a{
     transition: transform 0.3s, color 0.4s, font-size 0.4s;
     line-height: 1.5;
-    text-shadow: 3px 2px 3px rgba(255, 0, 0, 0.418);
+    text-shadow: 2px 0px 8px rgba(10, 225, 233, 0.562);
+    /* text-shadow: 3px 2px 3px rgba(255, 0, 0, 0.418); */
 }
 
 a:hover{
     transform: translate(-1.5px, -1.5px);
-    color: rgb(247, 247, 247);
+    color: rgb(41, 255, 3);
     font-size: 1.7em;
 }
 
 #voltar {
-    
     padding-top: 20px;
     height: 60px;
     width: 120px;

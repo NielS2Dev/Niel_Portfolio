@@ -6,20 +6,10 @@
     <title>Niel</title>
 
     <!-- Open Graph meta tags -->
-    
-    <!-- Título do site que aparecerá no preview -->
     <meta property="og:title" content="NielS2 - Meu Portfólio">
-    
-    <!-- Descrição curta que aparecerá no preview -->
     <meta property="og:description" content="NielS2- Este é o meu projeto de portfólio!">
-    
-    <!-- URL da imagem que será exibida no preview (precisa ser uma URL pública) -->
     <meta property="og:image" content="https://i.postimg.cc/GpSzGrdy/NielS2.jpg">
-    
-    <!-- URL do site que será compartilhada -->
     <meta property="og:url" content="https://niels2dev.github.io/portfolio/">
-    
-    <!-- Tipo de conteúdo (neste caso, um site) -->
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="style/style.css">
@@ -45,7 +35,7 @@
                 <label for="ilogin">Usuário:</label>
                 <input type="text" id="ilogin" placeholder="Digite seu nome" autocomplete="off">
                 <br id="quebra">
-                <input type="button" value="Entrar" id="botao" onclick="EntrarLogin()">
+                <input type="button" value="Entrar" id="botao" onclick="salvarNome()">
                 <a href="https://www.youtube.com/@NielS2l" target="_blank"><img src="icon/nielzinho.png" id="niel" alt="niel"></a>
             </section>
             <section class="bloco_secundario">
@@ -54,12 +44,24 @@
             </section>
         </main>
     </section>
+
     <footer>
         <div id="rodape">
             <p>Este site não é exatamente um portfólio formal, mas sim um espaço onde coloco em prática meus estudos de front-end. Estou sempre testando coisas novas e aprendendo ao longo do processo. Sinta-se à vontade para explorar, sem compromisso!</p>
             <p>Observação: Este site ainda está em desenvolvimento!</p>
         </div>
     </footer>
-    <script src="scripts/script.js"></script>
+
+    <script>
+        function salvarNome() {
+            var nome = document.getElementById('ilogin').value;
+            if (nome) {
+                localStorage.setItem('nomeUsuario', nome);  // Armazena o nome no localStorage
+                window.location.href = 'index_02.html';  // Redireciona para a segunda página
+            } else {
+                alert("Por favor, insira seu nome!");
+            }
+        }
+    </script>
 </body>
 </html>
