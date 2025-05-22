@@ -18,7 +18,7 @@ html, body {
   z-index: -1;
 }
 
-#professora, #unidade{
+#professora, #unidade, #ainda{
     font-size: 1.3em;
     font-weight: bolder;
     text-decoration: underline;
